@@ -32,6 +32,20 @@ Assuming that you have a copy of this project on your local machine with `gcloud
 1. Go to the root folder of this project `app2-cf-python-vertexai-http`.
 2. You should have both the `main.py` and `requirements.txt` file present in this folder.
 3. Provide the following command:
+
+   ```
+   gcloud functions deploy summarizeArticles \
+   --gen2 \
+   --runtime=python311 \
+   --source=. \
+   --region=$REGION \
+   --project=$PROJECT_ID \
+   --entry-point=hello_gcs \
+   --trigger-bucket=$BUCKET1 \
+   --set-env-vars=GCP_PROJECT=$PROJECT_ID,FUNCTION_REGION=$REGION \
+   --max-instances=1 \
+   --quiet
+   ```
    
 ## Invoking the Cloud Function
 Since this Cloud Function is deployed with a GCS trigger, you will need to do the following to see the entire flow in action:
