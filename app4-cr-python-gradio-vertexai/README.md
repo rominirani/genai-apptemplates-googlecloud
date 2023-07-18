@@ -49,3 +49,10 @@ gcloud auth configure-docker $REGION-docker.pkg.dev
 gcloud builds submit --tag $REGION-docker.pkg.dev/$PROJECT_ID/$AR_REPO/$SERVICE_NAME
 gcloud run deploy $SERVICE_NAME --port 7860 --image $REGION-docker.pkg.dev/$PROJECT_ID/$AR_REPO/$SERVICE_NAME --service-account=cloud-run-llm@$PROJECT_ID.iam.gserviceaccount.com --allow-unauthenticated --region=$REGION --platform=managed  --project=$PROJECT_ID
 ```
+Alternately, if you are in VS Code using the Cloud Code Extension, you can deploy the application directly to Cloud Run by:
+
+Click on Cloud Code extension in the bar at the bottom.
+Select Deploy to Cloud Run.
+Go ahead with the defaults. Modify them accordingly if you'd like.
+Click on Deploy.
+This will take a few minutes and the result will be the Cloud Run Service URL that you can use directly in the web browser to access the application.
