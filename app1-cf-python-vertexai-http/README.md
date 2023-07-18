@@ -21,7 +21,7 @@ Assuming that you have a copy of this project on your local machine with `gcloud
 2. You should have both the `main.py` and `requirements.txt` file present in this folder.
 3. Provide the following command:
    ```
-   gcloud functions deploy nodejs-http-function \
+   gcloud functions deploy predict \
    --gen2 \
    --runtime=python311 \
    --region=REGION \
