@@ -3,8 +3,7 @@ The goal of this repository is to provide a list of applications that you can de
 
 These code samples are provided as templates that you can use while creating a New Application via [Cloud Code Visual Studio](https://cloud.google.com/code) plugin. Official instructions are provided [here](https://cloud.google.com/code/docs/vscode/set-up-sample-repo).
 
-## Custom Samples Configuration File (.cctemplate)
-The key thing to understand is the presence of the `.cctemplate` file in this repo. It contains the `templates` element that has entries for the samples that you have in this repository:
+## List of Applications 
 - [App 1 : Python Cloud Function](app1-cf-python-vertexai-http)
 - [App 2 : Python Cloud Function processing GCS documents](app2-cf-python-vertexai-gcs)
 - [App 3 : Python Flask-based Web Chat Application](app3-cr-python-flask-vertexai)
