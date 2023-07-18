@@ -58,4 +58,4 @@ You can go through the various projects and pick a project or two that interests
 6. Complete the rest of the steps to import the projects into Visual Studio Code.
 
 ## Deploying the application(s) on Google Cloud
-You can choose to use Cloud Code VS Extension itself to deploy any of these applications to Google Cloud in your specific Cloud Project and Account. Alternately, feel free to use the console and /or `gcloud` commands to deploy the same. 
+You can choose to use Cloud Code VS Extension itself to deploy any of these applications to Google Cloud in your specific Cloud Project and Account. Alternately, feel free to use the console and /or `gcloud` commands to deploy the same. Please visit each of the folders for the respective instructions to deploy to Google Cloud. 
