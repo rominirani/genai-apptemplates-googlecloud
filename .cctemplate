@@ -12,17 +12,17 @@
          "path":"app2-cf-python-vertexai-gcs",
          "name":"App 2 : Python Cloud Function processing GCS documents",
          "description":"Python Cloud Function that invokes summarization with PaLM API Models via Vertex AI API on GCS documents"
-      }
+      },
        {
          "path":"app3-cr-python-flask-vertexai",
          "name":"App 3 : Python Flask-based Web Chat Application",
          "description":"Cloud Run application with Web UI that demonstrates working with Vertex AI API"
-      }
+      },
        {
          "path":"app4-cr-python-gradio-vertexai",
          "name":"App 4 : Gradio Web Application interacting with PaLM Model via VerteX AI API",
          "description":"Cloud Run application utilizing Gradio Framework that demonstrates working with Vertex AI API"
-      }
+      },
        {
          "path":"app5-cr-python-streamlit-vertexai",
          "name":"App 5 : Streamlit Web Application interacting with PaLM Model via VerteX AI API",
