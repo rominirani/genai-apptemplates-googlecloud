@@ -33,6 +33,8 @@ gcloud iam service-accounts add-iam-policy-binding \
 
 ## Build and deploy in Cloud Run
 
+First up, ensure that you have added your Google Project Id in the `app/app.py' file. 
+
 To build and deploy the [Gradio app](https://gradio.app/) in [Cloud Run](https://cloud.google.com/run/docs/quickstarts/deploy-container), you need to build the Docker image in Artifact Registry and deploy it in Cloud Run.
 
 Note authentication is disabled and the service account is the one configured earlier:
