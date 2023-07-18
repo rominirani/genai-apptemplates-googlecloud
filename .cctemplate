@@ -2,7 +2,6 @@
    "metadata":{
       "version":"1"
    },
-   "name": "Sample Applications deployable on Google Cloud that demonstrate Vertex AI Generative AI usage",
    "templates":[
       {
          "path":"app1-cf-python-vertexai-http",
