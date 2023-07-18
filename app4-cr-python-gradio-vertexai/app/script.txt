@@ -1,0 +1,29 @@
+# Create service account
+gcloud iam service-accounts create cloud-run-llm \
+    --description="Service account to call LLM models from Cloud Run" \
+    --display-name="cloud-run-llm"
+
+# add aiplatform.user role
+gcloud projects add-iam-policy-binding gcp-experiments-349209 \
+    --member="serviceAccount:cloud-run-llm@gcp-experiments-349209.iam.gserviceaccount.com" \
+    --role="roles/aiplatform.user"
+
+# add logging.logWriter role
+gcloud projects add-iam-policy-binding gcp-experiments-349209 \
+    --member="serviceAccount:cloud-run-llm@gcp-experiments-349209.iam.gserviceaccount.com" \
+    --role="roles/logging.logWriter"
+
+# add permission to impersonate the sa (iam.serviceAccounts.actAs), since this is a user-namaged sa
+gcloud iam service-accounts add-iam-policy-binding \
+    cloud-run-llm@gcp-experiments-349209.iam.gserviceaccount.com \
+    --member="user:romin@cloudadvocacyorg.joonix.net" \
+    --role="roles/iam.serviceAccountUser"
+
+gcloud auth configure-docker us-central1-docker.pkg.dev
+
+gcloud artifacts repositories create my-repo --location=us-central1 --repository-format=Docker
+
+gcloud builds submit --tag us-central1-docker.pkg.dev/gcp-experiments-349209/ml-pipelines-repo/genai-chat-demo
+gcloud builds submit --tag us-central1-docker.pkg.dev/gcp-experiments-349209/ml-pipelines-repo/streamlit-hello-world-text-demo
+
+gcloud run deploy genai-text-demo --port 8080 --image us-central1-docker.pkg.dev/gcp-experiments-349209/ml-pipelines-repo/genai-text-demo --service-account=cloud-run-llm@gcp-experiments-349209.iam.gserviceaccount.com --allow-unauthenticated --region=europe-west4 --platform=managed  --project=gcp-experiments-349209
