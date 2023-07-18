@@ -4,45 +4,12 @@ The goal of this repository is to provide a list of applications that you can de
 These code samples are provided as templates that you can use while creating a New Application via [Cloud Code Visual Studio](https://cloud.google.com/code) plugin. Official instructions are provided [here](https://cloud.google.com/code/docs/vscode/set-up-sample-repo).
 
 ## Custom Samples Configuration File (.cctemplate)
-The key thing to understand is the presence of the `.cctemplate` file in this repo. It contains the `templates` element that has entries for the two folders or samples that you have in this repository:
-- `java-springboot-api`
-- `python-flask-api`
-
-```
-{
-   "metadata":{
-      "version":"1"
-   },
-   "name": "Sample Applications deployable on Google Cloud that demonstrate Vertex AI Generative AI usage",
-   "templates":[
-      {
-         "path":"app1-cf-python-vertexai-http",
-         "name":"App 1 : Python Cloud Function",
-         "description":"Python Cloud Function invoking PaLM API Models via Vertex AI API"
-      },
-       {
-         "path":"app2-cf-python-vertexai-gcs",
-         "name":"App 2 : Python Cloud Function processing GCS documents",
-         "description":"Python Cloud Function that invokes summarization with PaLM API Models via Vertex AI API on GCS documents"
-      }
-       {
-         "path":"app3-cr-python-flask-vertexai",
-         "name":"App 3 : Python Flask-based Web Chat Application",
-         "description":"Cloud Run application with Web UI that demonstrates working with Vertex AI API"
-      }
-       {
-         "path":"app4-cr-python-gradio-vertexai",
-         "name":"App 4 : Gradio Web Application interacting with PaLM Model via VerteX AI API",
-         "description":"Cloud Run application utilizing Gradio Framework that demonstrates working with Vertex AI API"
-      }
-       {
-         "path":"app5-cr-python-streamlit-vertexai",
-         "name":"App 5 : Streamlit Web Application interacting with PaLM Model via VerteX AI API",
-         "description":"Cloud Run application utilizing Streamlit Framework that demonstrates working with Vertex AI API"
-      }
-   ]
-}
-```
+The key thing to understand is the presence of the `.cctemplate` file in this repo. It contains the `templates` element that has entries for the samples that you have in this repository:
+- [App 1 : Python Cloud Function](app1-cf-python-vertexai-http)
+- [App 2 : Python Cloud Function processing GCS documents](app2-cf-python-vertexai-gcs)
+- [App 3 : Python Flask-based Web Chat Application](app3-cr-python-flask-vertexai)
+- [App 4 : Gradio Web Application interacting with PaLM Model via VerteX AI API](app4-cr-python-gradio-vertexai)
+- [App 5 : Streamlit Web Application interacting with PaLM Model via VerteX AI API](app5-cr-python-streamlit-vertexai)
 
 ## What are the sample applications about?
 You can go through the various projects and pick a project or two that interests you. Refer to the description for each of the projects above. The repository provides a mix of examples that help you pick a combination of one or more of Cloud Functions, Cloud Run, Streamlit, Gradio and Flask frameworks.
