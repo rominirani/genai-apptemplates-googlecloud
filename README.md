@@ -4,9 +4,9 @@ The goal of this repository is to provide a list of applications that you can de
 These code samples are provided as templates that you can use while creating a New Application via [Cloud Code Visual Studio](https://cloud.google.com/code) plugin. Official instructions are provided [here](https://cloud.google.com/code/docs/vscode/set-up-sample-repo).
 
 ## List of Applications 
-- [App 1 : Python Cloud Function](app1-cf-python-vertexai-http)
-- [App 2 : Python Cloud Function processing GCS documents](app2-cf-python-vertexai-gcs)
-- [App 3 : Python Flask-based Web Chat Application](app3-cr-python-flask-vertexai)
+- [App 1 : Python Cloud Function that invokes the Text and Code PaLM Models](app1-cf-python-vertexai-http)
+- [App 2 : Python Cloud Function processing GCS documents and summarizes the contents via the Text PaLM Model](app2-cf-python-vertexai-gcs)
+- [App 3 : Python Flask-based Web Chat Application that integrates with Chat PaLM Model](app3-cr-python-flask-vertexai)
 - [App 4 : Gradio Web Application interacting with PaLM Model via VerteX AI API](app4-cr-python-gradio-vertexai)
 - [App 5 : Streamlit Web Application interacting with PaLM Model via VerteX AI API](app5-cr-python-streamlit-vertexai)
 
