@@ -5,7 +5,7 @@ from vertexai.language_models import TextGenerationModel
 
 import gradio as gr
 
-PROJECT_ID = "gcp-experiments-349209"
+PROJECT_ID = "$PROJECT_ID"
 LOCATION = "us-central1"
 
 client = google.cloud.logging.Client(project=PROJECT_ID)
