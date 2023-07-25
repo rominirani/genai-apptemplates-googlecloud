@@ -1,4 +1,4 @@
-# Gen AI on Google Cloud Workshop
+# Gen AI Application templates on Google Cloud
 The goal of this repository is to provide a list of applications that you can deploy on Google Cloud. The applications demonstrate how you can use standard frameworks like Python Flask, Streamlit, Gradio to host applications on Google Cloud that interact with the Vertex AI PaLM Models : Text , Chat and Code. These code samples are provided as templates that you can use. 
 
 ## List of Applications 
