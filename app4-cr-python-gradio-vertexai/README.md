@@ -2,6 +2,8 @@
 
 This application demonstrates a Cloud Run application that uses the [Gradio](https://www.gradio.app/) framework. This project is inspired/taken from the following repository: [https://github.com/rafaelsf80/genai-vertex-text](https://github.com/rafaelsf80/genai-vertex-text).
 
+<img src="gradioapp-screen.png"/>
+
 ## User managed service account for Cloud Run
 
 Since the application is deployed in Cloud Run, it uses the permissions of the compute service account by default. In this application, we can look at a best practice to use a separate service account for minimum permissions. To do that, [create the service account with impersonation](https://cloud.google.com/run/docs/securing/service-identity) and the following two extra roles: `roles/aiplatform.user` to be able to call predictions and `roles/logging.logWriter` to be able to write logs.
