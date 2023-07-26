@@ -17,6 +17,9 @@ The goal of this repository is to provide a list of applications that you can de
 5. You will shown all the projects. Select one of your choice.
 6. Complete the rest of the steps to import the projects into Visual Studio Code.
 
+Check the screencast below:
+<img src="import-apps-into-cloudcode.gif"/>
+
 ## Deploying the application(s) on Google Cloud
 You can choose to use Cloud Code VS Extension itself to deploy any of these applications to Google Cloud in your specific Cloud Project and Account. Alternately, feel free to use the console and /or `gcloud` commands to deploy the same. Please visit each of the folders for the respective instructions to deploy to Google Cloud. 
 
