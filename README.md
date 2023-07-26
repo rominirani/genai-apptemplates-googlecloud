@@ -1,5 +1,5 @@
 # Gen AI Application templates on Google Cloud
-The goal of this repository is to provide a list of applications that you can deploy on Google Cloud. The applications demonstrate how you can use standard frameworks like Python Flask, Streamlit, Gradio to host applications on Google Cloud that interact with the Vertex AI PaLM Models : Text , Chat and Code. These code samples are provided as templates that you can use. 
+The goal of this repository is to provide a list of applications that you can deploy on Google Cloud. The applications demonstrate how you can use standard frameworks like Python Flask, Streamlit, Gradio to host applications on Google Cloud that interact with the Vertex AI PaLM Models : Text , Chat and Code. These code samples are provided as templates that you can use. You can go through the various projects and pick a project or two that interests you. Click on any of the projects to see detailed documentation, sample template and instructions to deploy on Google Cloud. 
 
 ## List of Applications 
 - [App 1 : Python Cloud Function that invokes the Text and Code PaLM Models](app1-cf-python-vertexai-http)
@@ -7,10 +7,6 @@ The goal of this repository is to provide a list of applications that you can de
 - [App 3 : Python Flask-based Web Chat Application that integrates with Chat PaLM Model](app3-cr-python-flask-vertexai)
 - [App 4 : Gradio Web Application interacting with PaLM Model via VerteX AI API](app4-cr-python-gradio-vertexai)
 - [App 5 : Streamlit Web Application interacting with PaLM Model via VerteX AI API](app5-cr-python-streamlit-vertexai)
-
-## What are the sample applications about?
-You can go through the various projects and pick a project or two that interests you. Refer to the description for each of the projects above. The repository provides a mix of examples that help you pick a combination of one or more of Cloud Functions, Cloud Run, Streamlit, Gradio and Flask frameworks.
-
 
 ## Using the Custom Samples via Cloud Code plugin
 
