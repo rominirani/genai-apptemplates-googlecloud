@@ -1,6 +1,8 @@
 # Cloud Run application utilizing Streamlit Framework that demonstrates working with Vertex AI API
 This application demonstrates a Cloud Run application that uses the [Streamlit](https://streamlit.io/) framework. This project is inspired/taken from the following repository: [https://github.com/lavinigam-gcp/vertex_palm_streamlit_flask/tree/main/demo/streamlit/hello-world-text](https://github.com/lavinigam-gcp/vertex_palm_streamlit_flask/tree/main/demo/streamlit/hello-world-text).
 
+<img src="streamlitapp-screen.png"/>
+
 ## Deploying the Application to Cloud Run
 
 To deploy the Streamlit Application in [Cloud Run](https://cloud.google.com/run/docs/quickstarts/deploy-container), you need to build the Docker image in Artifact Registry and deploy it in Cloud Run.
