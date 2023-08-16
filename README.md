@@ -4,7 +4,7 @@ Looking to build Gen AI applications that integrate with Vertex AI PaLM Foundati
 
 The Sample Applications listed are provided as application templates that you can use. The key goal of these applications is to get you started quickly and help you understand how you can integrate the Vertex PaLM API and the necessary commands to deploy these applications to Google Cloud. 
 
-You can go through the various applications and pick an application or two that interests you. Click on any of the projects to see detailed documentation, sample template and instructions to deploy on Google Cloud.
+You can go through the various applications and pick an application or two that interests you. Click on any of the applications to see detailed documentation, sample template and instructions to deploy on Google Cloud.
 
 ## Environment Setup
 
@@ -12,14 +12,14 @@ We provide instructions for setting up your environment in [Cloud Shell](https:/
 
 ## Sample Applications
 
-| Application Name | Description | Technologies Used |
+| Requirement | Application Name | Technologies Used |
 |---|---|---|
-|[chat-flask-cloudrun](chat-flask-cloudrun)|Python Flask-based Web Chat Application interacting with Vertex AI Chat PaLM Model.|Cloud Run, Python Flask|
-|[chat-gradio](chat-gradio)|Gradio Web Application interacting with Vertex AI Text PaLM Model.|Cloud Run, Gradio, Python|
-|[chat-streamlit](chat-streamlit)|Streamlit Web Application interacting with Vertex AI Text PaLM Model.|Cloud Run, Streamlit, Python|
-|[code-predict-cloudfunction](code-predict-cloudfunction)|Python Cloud Function that invokes the Vertex AI Text PaLM Model.|Cloud Functions v2, Python|
-|[text-predict-cloudfunction](text-predict-cloudfunction)|Python Cloud Function that invokes the Vertex AI Code PaLM Model.|Cloud Functions v2, Python|
-|[summarization-gcs-cloudfunction](summarization-gcs-cloudfunction)|Python Cloud Function processing Cloud Storage documents and summarizes the contents via the Vertex AI Text PaLM Model. |Cloud Functions v2, Cloud Storage, Python|
+|Develop a chat application using Python Flask framework and Vertex AI PaLM API model |[chat-flask-cloudrun](chat-flask-cloudrun)|Cloud Run, Python Flask|
+|Develop a chat application using [Gradio](https://www.gradio.app/) framework and Vertex AI PaLM API model|[chat-gradio](chat-gradio)|Cloud Run, Gradio, Python|
+|Develop a chat application using [Streamlit](https://streamlit.io/) framework and Vertex AI PaLM API model|[chat-streamlit](chat-streamlit)|Cloud Run, Streamlit, Python|
+|Provide an API for the Vertex AI PaLM Code Model for your client applications.|[code-predict-cloudfunction](code-predict-cloudfunction)|Cloud Functions v2, Python|
+|Provide an API for the Vertex AI PaLM Text Model for your client applications.|[text-predict-cloudfunction](text-predict-cloudfunction)|Cloud Functions v2, Python|
+|Develop an Event-Driven application that processes uploaded files and summarizes their content|[summarization-gcs-cloudfunction](summarization-gcs-cloudfunction) |Cloud Functions v2, Cloud Storage, Python|
 
 ## (Optional) Using the Custom Samples via Cloud Code for VS Code plugin
 
