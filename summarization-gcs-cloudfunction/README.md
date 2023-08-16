@@ -75,5 +75,5 @@ Assuming that you have a copy of this project on your local machine with `gcloud
 Since this Cloud Function is deployed with a GCS trigger, you will need to do the following to see the entire flow in action:
 
 1. Ensure that you have the following GCS buckets created `$BUCKET_NAME` and `$BUCKET_NAME-summaries`.
-2. Upload a file (lets call it `story.md`) with some text in the `$BUCKET` bucket.
-3. This should trigger the `summarizeArticles` function and within a few seconds, you should see a `story-summary.md` file created in the `$BUCKET-summaries` bucket.
+2. Upload a file (lets call it `story.md`) with some text in the `$BUCKET_NAME` bucket.
+3. This should trigger the `summarizeArticles` function and within a few seconds, you should see a `story.md` (summarized form) file created in the `$BUCKET-summaries` bucket.
