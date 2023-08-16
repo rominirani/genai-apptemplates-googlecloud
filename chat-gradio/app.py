@@ -1,3 +1,4 @@
+import os
 import google.cloud.logging
 
 import vertexai
@@ -5,8 +6,8 @@ from vertexai.language_models import TextGenerationModel
 
 import gradio as gr
 
-PROJECT_ID = "$PROJECT_ID" #Your Google Cloud Project ID
-LOCATION_NAME="us-central1" #us-central1
+PROJECT_ID = os.environ.get('GCP_PROJECT') #Your Google Cloud Project ID
+LOCATION = os.environ.get('GCP_REGION')   #Your Google Cloud Project Region
 
 client = google.cloud.logging.Client(project=PROJECT_ID)
 client.setup_logging()
@@ -14,7 +15,7 @@ client.setup_logging()
 log_name = "genai-vertex-text-log"
 logger = client.logger(log_name)
 
-vertexai.init(project=PROJECT_ID, location=LOCATION_NAME)
+vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 model = TextGenerationModel.from_pretrained("text-bison@001")
 
@@ -30,8 +31,8 @@ def predict(prompt, max_output_tokens, temperature, top_p, top_k):
 
 examples = [
     ["What are some generative AI services on Google Cloud in Public Preview?"],
-    ["How many zipcodes are there in Mumbai"],
-    ["What is the Zipcode for Kandivali East in Mumbai"],
+    ["What is the capital of United States?"],
+    ["Suggest a recipe for chocolate chip cookies?"],
 ]
 
 demo = gr.Interface(
