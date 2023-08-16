@@ -46,8 +46,8 @@ def summarize_gcs_object(cloud_event):
         }
     prompt_response = predict_text(prompt,**parameters)
 
-    # Save the summary in another blob in the summary bucket
-    summary_blob_name = "f{name.split(\".\")[0]}-summary.{name.split(\".\")[1]}"
+    # Save the summary in another blob (same name as the original blob) in the summary bucket
+    summary_blob_name = name
     summarization_bucket = storage_client.bucket(f"{bucketname}-summaries")
     summary_blob = summarization_bucket.blob(summary_blob_name)
     summary_blob.upload_from_string(prompt_response.encode('utf-8'))
