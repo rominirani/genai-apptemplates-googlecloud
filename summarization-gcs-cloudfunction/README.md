@@ -11,7 +11,7 @@ This application demonstrates a Cloud Function written in Python that gets trigg
 Your Cloud Function requires access to two environment variables:
 
 - `GCP_PROJECT` : This the Google Cloud Project Id.
-- `FUNCTION_REGION` : This is the region in which you are deploying your Cloud Function. For e.g. us-central1.
+- `GCP_REGION` : This is the region in which you are deploying your Cloud Function. For e.g. us-central1.
 
 These variables are needed since the Vertex AI initialization needs the Google Cloud Project Id and the region. The specific code line from the `main.py` function is shown here:
 `vertexai.init(project=PROJECT_ID, location=LOCATION)`
@@ -19,8 +19,8 @@ These variables are needed since the Vertex AI initialization needs the Google C
 In Cloud Shell, execute the following commands:
 
 ```bash
-export GCP_PROJECT=<Your GCP Project Id>
-export FUNCTION_REGION=<Your Function Region> 
+export GCP_PROJECT='<Your GCP Project Id>'  # Change this
+export GCP_REGION='us-central1'             # If you change this, make sure region is supported by Model Garden. When in doubt, keep this.
 ```
 
 These variables can be set via the following [instructions](https://cloud.google.com/functions/docs/configuring/env-var) via any of the following ways:
@@ -34,21 +34,18 @@ These variables can be set via the following [instructions](https://cloud.google
 
 We will need to create 2 GCS buckets:
 
-- The first bucket will be used to upload the files to summarize. Let us call the bucket `$BUCKETNAME` (Replace it with your unique GCS Bucket name)
+- The first bucket will be used to upload the files to summarize. Let us call the bucket `$BUCKETNAME`. Create the environment variable to store your Bucket name as shown below:
 
 ```bash
-export BUCKETNAME=gs://<Your_Bucket_Name>>
+export BUCKET_NAME='Your GCS Bucket Name'
 ```
-- The second bucket will having a prefix `-summaries`. So create a bucket with the following name `$BUCKETNAME-summaries`
+- The second bucket will having a prefix `-summaries`. 
 
-You can create a bucket either from Google Cloud Console or from the command line via the `gsutil` command:
-
-```bash
-gsutil mb -l $FUNCTION_REGION $BUCKETNAME
-```
+You can create a bucket either from Google Cloud Console or from the command line via the `gsutil` command. Execute the commands below in Cloud Shell. 
 
 ```bash
-gsutil mb -l $FUNCTION_REGION $BUCKETNAME-summaries
+gsutil mb -l $GCP_REGION gs://"$BUCKETNAME"
+gsutil mb -l $GCP_REGION gs://"$BUCKETNAME"-summaries
 ```
 
 ### Deploy the function
@@ -64,11 +61,11 @@ Assuming that you have a copy of this project on your local machine with `gcloud
    --gen2 \
    --runtime=python311 \
    --source=. \
-   --region=$FUNCTION_REGION \
+   --region=$GCP_REGION \
    --project=$GCP_PROJECT \
    --entry-point=summarize_gcs_object \
    --trigger-bucket=$BUCKETNAME \
-   --set-env-vars=GCP_PROJECT=$GCP_PROJECT,FUNCTION_REGION=$FUNCTION_REGION \
+   --set-env-vars=GCP_PROJECT=$GCP_PROJECT,GCP_REGION=$GCP_REGION \
    --max-instances=1 \
    --quiet
    ```
@@ -77,6 +74,6 @@ Assuming that you have a copy of this project on your local machine with `gcloud
 
 Since this Cloud Function is deployed with a GCS trigger, you will need to do the following to see the entire flow in action:
 
-1. Ensure that you have the following GCS buckets created `$BUCKET` and `$BUCKET-summaries`.
+1. Ensure that you have the following GCS buckets created `$BUCKET_NAME` and `$BUCKET_NAME-summaries`.
 2. Upload a file (lets call it `story.md`) with some text in the `$BUCKET` bucket.
 3. This should trigger the `summarizeArticles` function and within a few seconds, you should see a `story-summary.md` file created in the `$BUCKET-summaries` bucket.
