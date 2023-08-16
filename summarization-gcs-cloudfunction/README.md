@@ -44,8 +44,8 @@ export BUCKET_NAME='Your GCS Bucket Name'
 You can create a bucket either from Google Cloud Console or from the command line via the `gsutil` command. Execute the commands below in Cloud Shell. 
 
 ```bash
-gsutil mb -l $GCP_REGION gs://"$BUCKETNAME"
-gsutil mb -l $GCP_REGION gs://"$BUCKETNAME"-summaries
+gsutil mb -l $GCP_REGION gs://"$BUCKET_NAME"
+gsutil mb -l $GCP_REGION gs://"$BUCKET_NAME"-summaries
 ```
 
 ### Deploy the function
