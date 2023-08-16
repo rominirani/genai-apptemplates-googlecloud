@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 import vertexai
 from vertexai.preview.language_models import ChatModel
+import os
 
 app = Flask(__name__)
-PROJECT_ID = "$PROJECT_ID" #Your Google Cloud Project ID
-LOCATION = "us-central1"   #us-central1 for now
+PROJECT_ID = os.environ.get('GCP_PROJECT') #Your Google Cloud Project ID
+LOCATION = PROJECT_ID = os.environ.get('GCP_REGION')   #Your Google Cloud Project Region
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 def create_session():
