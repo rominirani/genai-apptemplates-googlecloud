@@ -58,7 +58,7 @@ curl -m 70 -X POST https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/predictCo
 If you'd like to see a better formatted version of the code, try the following invocation that formats the response using new lines:
 
 ```bash
-curl -m 70 -X POST https://us-central1-gcp-experiments-349209.cloudfunctions.net/predictCode \
+curl -m 70 -X POST https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/predictCode \
 -H "Content-Type: application/json" \
 -d '{
 "prompt": "Write a Python function to make a call to a URL?"
