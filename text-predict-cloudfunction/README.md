@@ -7,15 +7,15 @@ This application demonstrates a Cloud Function written in Python that initialize
 Your Cloud Function requires access to two environment variables:
 
 - `GCP_PROJECT` : This the Google Cloud Project Id.
-- `FUNCTION_REGION` : This is the region in which you are deploying your Cloud Function. For e.g. us-central1.
+- `GCP_REGION` : This is the region in which you are deploying your Cloud Function. For e.g. us-central1.
 
 These variables are needed since the Vertex AI initialization needs the Google Cloud Project Id and the region. The specific code line from the `main.py` function is shown here:
 `vertexai.init(project=PROJECT_ID, location=LOCATION)`
 
 In Cloud Shell, execute the following commands:
 ```bash
-export GCP_PROJECT=<Your GCP Project Id>
-export FUNCTION_REGION=<Your Function Region> 
+export GCP_PROJECT='<Your GCP Project Id>'  # Change this
+export GCP_REGION='us-central1'             # If you change this, make sure region is supported by Model Garden. When in doubt, keep this.
 ```
 
 These variables can be set via the following [instructions](https://cloud.google.com/functions/docs/configuring/env-var) via any of the following ways:
@@ -35,11 +35,11 @@ Assuming that you have a copy of this project on your local machine with `gcloud
    gcloud functions deploy predictText \
    --gen2 \
    --runtime=python311 \
-   --region=$FUNCTION_REGION \
+   --region=$GCP_REGION \
    --source=. \
    --entry-point=predictText \
    --trigger-http \
-   --set-env-vars=GCP_PROJECT=$GCP_PROJECT,FUNCTION_REGION=$FUNCTION_REGION \
+   --set-env-vars=GCP_PROJECT=$GCP_PROJECT,GCP_REGION=$GCP_REGION \
    --allow-unauthenticated
    ```
 
@@ -48,7 +48,7 @@ Assuming that you have a copy of this project on your local machine with `gcloud
 Since this Cloud Function is deployed with a HTTP trigger, you can directly invoke it. Sample calls are shown below:
 
 ```bash
-curl -m 70 -X POST https://$FUNCTION_REGION-$GCP_PROJECT.cloudfunctions.net/predictText \
+curl -m 70 -X POST https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/predictText \
 -H "Content-Type: application/json" \
 -d '{
   "prompt": "What are the best places to visit in the United States?"
