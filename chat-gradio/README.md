@@ -45,5 +45,5 @@ To deploy the Gradio App in [Cloud Run](https://cloud.google.com/run/docs/quicks
       --project=$GCP_PROJECT \
       --set-env-vars=GCP_PROJECT=$GCP_PROJECT,GCP_REGION=$GCP_REGION
     ```
-On successfully deployment, you will be provided a URL to the Cloud Run service. You can visit that in the browser to view the application that you just deployed. Select from one of the predefined queries and the application will query the Vertex AI model and provide you with a response. 
+On successfully deployment, you will be provided a URL to the Cloud Run service. You can visit that in the browser to view the application that you just deployed. Select from one of the predefined queries and the application will query the Vertex AI Text model and provide you with a response. 
 
