@@ -8,7 +8,7 @@ import vertexai
 from vertexai.language_models import TextGenerationModel
 
 PROJECT_ID  = os.environ.get('GCP_PROJECT','-')
-LOCATION = os.environ.get('FUNCTION_REGION','-')
+LOCATION = os.environ.get('GCP_REGION','-')
 
 client = google.cloud.logging.Client(project=PROJECT_ID)
 client.setup_logging()
