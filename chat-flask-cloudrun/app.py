@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 PROJECT_ID = os.environ.get('GCP_PROJECT') #Your Google Cloud Project ID
-LOCATION = PROJECT_ID = os.environ.get('GCP_REGION')   #Your Google Cloud Project Region
+LOCATION = os.environ.get('GCP_REGION')   #Your Google Cloud Project Region
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 def create_session():
