@@ -36,7 +36,7 @@ To deploy the Flask Application in [Cloud Run](https://cloud.google.com/run/docs
     In Cloud Shell, execute the following command:
     ```bash
     gcloud run deploy "$SERVICE_NAME" --port 8080 --image "$GCP_REGION-docker.pkg.dev/$GCP_PROJECT/$AR_REPO/$SERVICE_NAME" --allow-unauthenticated -- 
-    region="$GCP_REGION" --platform=managed  --project="$GCP_PROJECT" --set-env-vars=[GCP_PROJECT="$GCP_PROJECT", GCP_REGION="$GCP_REGION"]
+    region="$GCP_REGION" --platform=managed  --project="$GCP_PROJECT" --set-env-vars=GCP_PROJECT=$GCP_PROJECT,GCP_REGION=$GCP_REGION \
     ```
 On successfully deployment, you will be provided a URL to the Cloud Run service. You can visit that in the browser to view the application that you just deployed. Give it a few queries of your choice and the application will query the Vertex AI Chat Model and provide you with the response. 
 
