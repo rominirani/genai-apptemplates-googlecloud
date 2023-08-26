@@ -32,6 +32,11 @@
          "path":"text-predict-cloudfunction",
          "name":"Python Cloud Function invoking Text PaLM Model",
          "description":"Python Cloud Function invoking Vertex AI Text PaLM API Model API"
+      },
+      {
+         "path":"summarization-slack",
+         "name":"Slack Slash Command powered by a Python Cloud Function invoking Text PaLM Model",
+         "description":"Slack Slash command that is powered by a Python Cloud Function invoking Vertex AI Text PaLM API Model API to summarize text provided by the user"
       }
    ]
 }

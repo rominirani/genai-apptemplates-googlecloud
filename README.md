@@ -20,6 +20,7 @@ We provide instructions for setting up your environment in [Cloud Shell](https:/
 |Provide an API for the Vertex AI PaLM Code Model for your client applications.|[code-predict-cloudfunction](code-predict-cloudfunction)|Cloud Functions v2, Python|
 |Provide an API for the Vertex AI PaLM Text Model for your client applications.|[text-predict-cloudfunction](text-predict-cloudfunction)|Cloud Functions v2, Python|
 |Develop an Event-Driven application that processes uploaded files and summarizes their content. If you are looking for a detailed summarization solution with reference architecture, refer to our [Jump Start Solution - Generative AI Document Summarization](https://cloud.google.com/architecture/ai-ml/generative-ai-document-summarization).|[summarization-gcs-cloudfunction](summarization-gcs-cloudfunction) |Cloud Functions v2, Cloud Storage, Python|
+|Develop a Slack Slash Command that helps summarize text for the user.|[summarization-slack](summarization-slack) |Cloud Functions v2, Python|
 
 ## (Optional) Using the Custom Samples via Cloud Code for VS Code plugin
 
