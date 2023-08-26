@@ -1,6 +1,6 @@
 # Slack Integration
 
-This application demonstrates how to create a Slack Slash Command integration that provides a summarization service to the user in the Slack Application. 
+This application demonstrates how to create a [Slack Slash Command](https://api.slack.com/interactivity/slash-commands) integration that provides a summarization service to the user in the Slack Application. 
 
 The user will invoke a slash command `/summarize` and provide the text to the be summarized. This will then invoke a Cloud Function that accepts the text and invokes the PaLM API for summarization. The result is then returned back to the Slack Slash command and displayed as a response to the user in the Slack Application. 
 
