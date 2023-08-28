@@ -30,7 +30,7 @@ The function works as follows:
 
 ## Steps to integrate summarization in your Google Doc
 
-1. Make a copy of the [Gen AI Text Summarization - Google Doc Integration](https://docs.google.com/document/d/1kqAK6EXQZ0oacdhISd9sU8hxHflxkYAEXkk2XUSK9mo/copy) document.
+1. Make a copy of the [Gen AI Text Summarization - Google Doc Integration](https://docs.google.com/document/d/1kqAK6EXQZ0oacdhISd9sU8hxHflxkYAEXkk2XUSK9mo/copy?usp=sharing) document.
 2. From the main menu, click on `Extensions --> Apps Script`. This will open up the Apps Script editor and you can take a look at the code.
 3. The code works as follows:
    - The selected text that the user wants to summarize is first identified.
