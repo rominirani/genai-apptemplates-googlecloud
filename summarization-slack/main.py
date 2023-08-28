@@ -16,7 +16,7 @@ logger = client.logger(log_name)
 
 
 @functions_framework.http
-def predictText(request):
+def summarizeText(request):
     token = request.form['token']
     logger.log(f"token received = {token}")
     #<TODO>Your code to validate token
