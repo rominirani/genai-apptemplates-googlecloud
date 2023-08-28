@@ -39,7 +39,7 @@ Assuming that you have a copy of this project on your local machine with `gcloud
    --runtime=python311 \
    --region=$GCP_REGION \
    --source=. \
-   --entry-point=predictText \
+   --entry-point=summarizeText \
    --trigger-http \
    --set-env-vars=GCP_PROJECT=$GCP_PROJECT,GCP_REGION=$GCP_REGION \
    --allow-unauthenticated
@@ -58,7 +58,7 @@ We are going to create a custom Slash Command in Slack. This custom command that
 5. This will lead you to the **Settings** page. Click on Basic Information --> Slash Commands. Click on **Create New Command**
 6. In the **Create New Command** form, provide the following values:
    - Command : Give a slash command. For e.g. /summarize
-   - Request URL : Provide the full URL of the Cloud Function that we deployed. It will be of the following format: `https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/predictText`
+   - Request URL : Provide the full URL of the Cloud Function that we deployed. It will be of the following format: `https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/summarizeText`
    - Give a Short Description and Usage Hint. 
 7. Go back to **Settings --> Basic Information**. Click on **Install your app** and then click **Install to Workspace**. Go ahead and allow the next screen to install the app into your workspace. 
 
