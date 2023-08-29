@@ -16,7 +16,7 @@ logger = client.logger(log_name)
 
 
 @functions_framework.http
-def predictText(request):
+def wotd(request):
     logger.log(f"Received a request for Word of the Day")
 
     vertexai.init(project=PROJECT_ID, location=LOCATION)
