@@ -1,0 +1,14 @@
+{
+    "name": "Learn a Word Today",
+    "version": "1.0.0",
+    "description": "Asks for a random word from the English dictionary",
+    "manifest_version": 3,
+    "author": "Romin Irani",
+    "host_permissions": [
+        "https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/"
+      ],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Learn a Word Today"
+    }
+}

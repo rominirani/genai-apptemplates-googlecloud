@@ -22,6 +22,7 @@ We provide instructions for setting up your environment in [Cloud Shell](https:/
 |Develop an Event-Driven application that processes uploaded files and summarizes their content. If you are looking for a detailed summarization solution with reference architecture, refer to our [Jump Start Solution - Generative AI Document Summarization](https://cloud.google.com/architecture/ai-ml/generative-ai-document-summarization).|[summarization-gcs-cloudfunction](summarization-gcs-cloudfunction) |Cloud Functions v2, Cloud Storage, Python|
 |Develop a [Slack Slash Command](https://api.slack.com/interactivity/slash-commands) that helps summarize text for the user.|[summarization-slack](summarization-slack) |Cloud Functions v2, Python|
 |Develop a Apps Script function to summarize text inside a Google Doc.|[summarization-appsscript](summarization-appsscript) |Cloud Functions v2, Python, Apps Script|
+|Develop a Chrome Extension that works with PaLM API.|[wordlookup-chromeextension](wordlookup-chromeextension) |Cloud Functions v2, Python, HTML, CSS, JavaScript|
 
 ## (Optional) Using the Custom Samples via Cloud Code for VS Code plugin
 
