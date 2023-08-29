@@ -33,7 +33,7 @@ def predictText(request):
             "top_k": 40
         }
         prompt_response = model.predict(prompt,**parameters)
-        logger.log("PaLM Text Bison Model response: {prompt_response.text}")
+        logger.log(f"PaLM Text Bison Model response: {prompt_response.text}")
     else:
         prompt_response = 'No prompt provided.'
 
