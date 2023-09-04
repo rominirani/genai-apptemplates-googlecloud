@@ -18,20 +18,22 @@ jobs:
         with:
           api-key: ${{ secrets.API_KEY }} # Your PaLM API Key
           file_path: log.log # Path to your log file; Relative to root of the repository
+          output-file: report # Name of the output file to be uploaded as artifact
 
 ```
 
-An artifact named `report` will be generated once the action is completed. This artifact will contain the log summary and fixes report.
+An artifact named according to the `output-file` variable will be generated once the action is completed. This artifact will contain the log summary and fixes report.
 
 
 ## Inputs
 
 - `api-key`: Your PaLM API Key
 - `file_path`: Path to your log file; Relative to root of the repository
+- `output-file`: Name of the output file to be uploaded as artifact
 
 ## Outputs
 
--   `report file`: The log summary and fixes report will be generated as an artifact named `report` once the action is completed.
+-   `report file`: The log summary and fixes report will be generated as an artifact named according to `output-file` variable once the action is completed.
 
 
 ## Contributing
