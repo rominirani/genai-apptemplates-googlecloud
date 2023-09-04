@@ -7,7 +7,7 @@ def get_fix(path, apikey):
     # required prompt
     prompt = '''
     You are an expert at analyzing logs.
-    You have to summarize the content log content given to you and
+    You have to summarize the content of the log content given to you and
     suggest ways to fix errors if possible. Ignore any warnings
     that you see. If the file is not a typical log file or if the file is
     a program file in any programming language then inform the user
