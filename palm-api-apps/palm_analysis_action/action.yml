@@ -19,7 +19,7 @@ runs:
       shell: bash
     - run: ls
       shell: bash
-    - run: entrypoint.sh ${{ inputs.file_path }} ${{ inputs.api-key }} 
+    - run: entrypoint.sh 
       shell: bash
     - run: python -m pip install -r ${{ github.action_path }}/requirements.txt
       shell: bash
