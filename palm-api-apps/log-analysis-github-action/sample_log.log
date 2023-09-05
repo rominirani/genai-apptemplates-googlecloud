@@ -1,0 +1,22 @@
++--------------------------------------------------------------------------------+
+|0001:61:01.0: 9002: IOA reserved area LRC error                                 |
+|Device Errors Detected/Logged: 1/1                                              |
+|----------------------------------------------------------                      |
+|Device 1: 2:0:9:0                                                               |
+|Vendor/Product ID: IBM     ST336605LC                                           |
+|    Serial Number: 000227CE                                                     |
+|              WWN: 5000CCA00336F4AC                                             |
+|-----New Device Information-----                                                |
+|Vendor/Product ID:                                                              |
+|    Serial Number: 00000000                                                     |
+|              WWN: 0000000000000000                                             |
+|Cache Directory Card Information:                                               |
+|Vendor/Product ID:                                                              |
+|    Serial Number: 00000000                                                     |
+|              WWN: 0000000000000000                                             |
+|Adapter Card Information:                                                       |
+|Vendor/Product ID:                                                              |
+|    Serial Number: 00000000                                                     |
+|              WWN: 0000000000000000                                             |
+|Additional IOA Data: 00000000 00000000 00000000 00000000 00000000               |
++--------------------------------------------------------------------------------+
