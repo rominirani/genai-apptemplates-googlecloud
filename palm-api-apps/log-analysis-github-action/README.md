@@ -1,6 +1,7 @@
 # Palm Log Analysis Action
 Fast Track log analysis and debugging using this action.
-This github action can be used to summarize any log files generated in your automated CI/CD environment. The summary will also include possible solutions for any errors or warnings that might have been encountered by PaLM while going thorugh the log files.
+This github action can be used to summarize any log files generated in your automated CI/CD environment. The summary will also include possible solutions for any errors or warnings that might have been encountered by PaLM while going thorugh the log files. Read the associated [blog post](https://medium.com/google-cloud/automating-log-analysis-and-troubleshooting-with-the-palm-api-891ac31af1ae). 
+
 ## Usage
 
 ```yaml
@@ -34,8 +35,3 @@ An artifact named according to the `output-file` variable will be generated once
 ## Outputs
 
 -   `report file`: The log summary and fixes report will be generated as an artifact named according to `output-file` variable once the action is completed.
-
-
-## Contributing
-
-To contribute to this project you can fork this repository and work on a seperate branch. All the features will be merged to the `main` branch once they are tested and verified.
