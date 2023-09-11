@@ -25,7 +25,7 @@ We provide instructions for setting up your environment in [Cloud Shell](https:/
 |Develop a Chrome Extension that works with Vertex AI PaLM Text Model.|[wordlookup-chromeextension](wordlookup-chromeextension) |Cloud Functions v2, Python, HTML, CSS, JavaScript|
 |Sample Applications using PaLM Developers API|[palm-api-apps](palm-api-apps) |Applications built using PaLM Developers API [https://developers.generativeai.google/](https://developers.generativeai.google/)|
 
-## (Optional) Need to streamline access to Foundational Models via API Gateway
+## (Optional) Need to streamline access to Foundational Models via API Gateway?
 If you are conducting a Gen AI Hackathon or making some of the foundational models available to a larger set of developers in your organization, you would probably want to control access to the APIs and put a API Gateway/Proxy in front of those models. Google Cloud provides Apigee that you can use. Check out this [blog post](https://medium.com/google-cloud/using-apigee-standard-proxy-to-streamline-a-genai-hackathon-2d54d7092d19) that goes into the details on:
 - Why you would want to control access to your foundational models?
 - Advantages of an API proxy that manages access to your foundational models.
