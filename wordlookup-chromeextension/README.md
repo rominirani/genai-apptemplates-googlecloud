@@ -12,6 +12,9 @@ The result is then returned back to Chrome Extension that then displays the same
 
 Before we get to the Chrome Extension, let us first deploy the Cloud Function that works with the PaLM API. 
 
+> NOTE: **Before you move forward, ensure that you have followed the instructions in [SETUP.md](../SETUP.md).**
+Additionally, ensure that you have cloned this repository and are currently in the ```wordlookup-chromeextension``` folder for the rest of the commands.
+
 ## Environment variables required
 
 Your Cloud Function requires access to two environment variables:
