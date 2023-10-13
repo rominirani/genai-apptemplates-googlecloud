@@ -4,6 +4,9 @@ This application demonstrates how to create a [Slack Slash Command](https://api.
 
 The user will invoke a slash command `/summarize` and provide the text to the be summarized. This will then invoke a Cloud Function that accepts the text and invokes the PaLM API for summarization. The result is then returned back to the Slack Slash command and displayed as a response to the user in the Slack Application. 
 
+> NOTE: **Before you move forward, ensure that you have followed the instructions in [SETUP.md](../SETUP.md).**
+Additionally, ensure that you have cloned this repository and are currently in the ```summarization-slack``` folder for the rest of the commands.
+
 ## Environment variables required
 
 Your Cloud Function requires access to two environment variables:
