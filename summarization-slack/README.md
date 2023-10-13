@@ -52,7 +52,7 @@ One successful deployment, you will receive the URL of the Cloud Function that h
 
 ## Creat the Slack Slash Command
 
-We are going to create a custom Slash Command in Slack. This custom command that we shall call `\summarize` will invoke the Cloud Function that we have deployed in the previous section. Follow the steps given below:
+We are going to create a custom Slash Command in Slack. This custom command that we shall call `/summarize` will invoke the Cloud Function that we have deployed in the previous section. Follow the steps given below:
 
 1. Go to [api.slack.com/apps](https://api.slack.com/apps)
 2. Click **Create New App** 
