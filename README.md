@@ -14,6 +14,7 @@ We provide instructions for setting up your environment in [Cloud Shell](https:/
 
 | Requirement | Application Name | Technologies Used |
 |---|---|---|
+|Develop a chat application using FlutterFlow and Vertex AI PaLM API model. |[Medium Post](https://medium.com/google-cloud/flutterflow-and-vertex-ai-palm-2-integration-14c137e83053)|FlutterFlow, Flutter, Cloud Functions v2, Python|
 |Develop a chat application using Python Flask framework and Vertex AI PaLM API model. |[chat-flask-cloudrun](chat-flask-cloudrun)|Cloud Run, Python Flask|
 |Develop a chat application using [Gradio](https://www.gradio.app/) framework and Vertex AI PaLM API model.|[chat-gradio](chat-gradio)|Cloud Run, Gradio, Python|
 |Develop a chat application using [Streamlit](https://streamlit.io/) framework and Vertex AI PaLM API model.|[chat-streamlit](chat-streamlit)|Cloud Run, Streamlit, Python|
