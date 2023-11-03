@@ -1,4 +1,4 @@
-# Java Cloud Function that wraps the PaLM Chat Bison Models
+# Java Cloud Function that wraps the PaLM Chat Bison Models using langchain4j
 
 This application demonstrates a Cloud Function written in Java that initializes the Vertex AI Chat module and then provides an endpoint to invoke PaLM Chat Bison model. It uses the [langchain4j](https://github.com/langchain4j/langchain4j) package.
 
