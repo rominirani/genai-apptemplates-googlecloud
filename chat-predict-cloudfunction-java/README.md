@@ -38,7 +38,7 @@ Assuming that you have a copy of this project on your local machine with `gcloud
    --runtime=java11 \
    --region=$GCP_REGION \
    --source=. \
-   --entry-point=gcvf2.PredictChatFunction \
+   --entry-point=gcfv2.PredictChatFunction \
    --trigger-http \
    --set-env-vars=GCP_PROJECT=$GCP_PROJECT,GCP_REGION=$GCP_REGION \
    --allow-unauthenticated
@@ -52,6 +52,6 @@ Since this Cloud Function is deployed with a HTTP trigger, you can directly invo
 curl -m 70 -X POST https://$GCP_REGION-$GCP_PROJECT.cloudfunctions.net/PredictChatFunction \
 -H "Content-Type: application/json" \
 -d '{
-  "prompt": "What are the best places to visit in the United States?"
+  "prompt": "what is langchain4j?"
 }'
 ```
