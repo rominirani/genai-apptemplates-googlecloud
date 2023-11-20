@@ -16,11 +16,8 @@ import com.google.cloud.functions.HttpFunction;
 import com.google.cloud.functions.HttpRequest;
 import com.google.cloud.functions.HttpResponse;
 
-//LangChain4j packages
-import dev.langchain4j.data.message.AiMessage;
-import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.output.Response;
-import dev.langchain4j.model.vertexai.VextexAiLanguageModel;
+import dev.langchain4j.model.vertexai.VertexAiLanguageModel;
 
 public class TextPredictFunction implements HttpFunction {
   
@@ -45,7 +42,7 @@ public class TextPredictFunction implements HttpFunction {
     String prompt = jsonRequestObject.get("prompt").getAsString();
     if (prompt.length() > 0) {
 
-      VextexAiLanguageModel vertexAiLanguageModel = VextexAiLanguageModel.builder()
+      VertexAiLanguageModel vertexAiLanguageModel = VertexAiLanguageModel.builder()
           .endpoint("us-central1-aiplatform.googleapis.com:443")
           .project(GCP_PROJECT)
           .location(GCP_REGION)
