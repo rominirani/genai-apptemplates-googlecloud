@@ -3,7 +3,7 @@
 This application demonstrates a Cloud Function written in Java that initializes the Vertex AI Chat module and then provides an endpoint to invoke PaLM Chat Bison model. It uses the [langchain4j](https://github.com/langchain4j/langchain4j) package.
 
 > NOTE: **Before you move forward, ensure that you have followed the instructions in [SETUP.md](../SETUP.md).**
-Additionally, ensure that you have cloned this repository and are currently in the ```text-predict-cloudfunction``` folder for the rest of the commands.
+Additionally, ensure that you have cloned this repository and are currently in the ```chat-predict-cloudfunction-java``` folder for the rest of the commands.
 
 ## Environment variables required
 
