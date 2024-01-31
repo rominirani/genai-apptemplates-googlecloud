@@ -1,5 +1,5 @@
-import json
 import os
+import json
 
 from google.cloud import logging
 import functions_framework
@@ -36,9 +36,14 @@ def predictText(request):
         stream=True,
         )
 
-        prompt_response = ""
+        response_list = []
         for response in responses:
-            prompt_response.join(response.text)
+            try:
+                response_list.append(response.text)
+            except IndexError:
+                response_list.append("")
+                continue
+        prompt_response = " ".join(response_list)
     else:
         prompt_response = "No prompt provided."
 
