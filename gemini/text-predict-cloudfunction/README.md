@@ -2,7 +2,7 @@
 
 This application demonstrates a Cloud Function written in Python that initializes the Vertex AI module and then provides an endpoint to invoke Gemini Pro model. This Cloud Function demonstrates simply passing a Text prompt to the Gemini Pro model and expecting back a Text response. 
 
-> NOTE: **Before you move forward, ensure that you have followed the instructions in [SETUP.md](../SETUP.md).**
+> NOTE: **Before you move forward, ensure that you have followed the instructions in [SETUP.md](../../SETUP.md).**
 Additionally, ensure that you have cloned this repository and are currently in the ```gemini/text-predict-cloudfunction``` folder for the rest of the commands.
 
 ## Environment variables required
